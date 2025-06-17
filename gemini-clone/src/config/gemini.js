@@ -89,15 +89,11 @@ async function runChat(prompt) {
 
 export default runChat;*/
 
-import dotenv from "dotenv"; // Import dotenv for environment variables
-dotenv.config(); // Load environment variables immediately
-
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-1.5-pro-latest"; 
 
-const API_KEY = console.log(import.meta.env.VITE_GOOGLE_API_KEY);
-console.log(import.meta.env.VITE_GOOGLE_API_KEY);; // Ensure dotenv is loaded before using this
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 if (!API_KEY) {
   console.error("Error: Please set the GOOGLE_API_KEY environment variable.");
