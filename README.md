@@ -1,1 +1,2 @@
 # gemini-clone
+gemini prompt
